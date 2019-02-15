@@ -28,15 +28,7 @@ export function selectInstruments(state) {
 export function selectConfiguration(state) {
   return state.theater.configuration;
 }
-export function selectLabelInstruments(state) {
-  const labels = [];
-  state.theater.instruments.forEach(element => {
-    
-  });
-  return state.theater.instruments;
-}
 export function selectStepSliderImageCount(state) {
-  let count = 0;
   if(state.theater.configuration.currentInstrument 
     && state.theater.configuration.currentResolution 
     && state.theater.instruments[state.theater.configuration.currentInstrument].images[state.theater.configuration.currentResolution]

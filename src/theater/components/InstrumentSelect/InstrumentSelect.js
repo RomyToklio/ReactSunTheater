@@ -24,7 +24,7 @@ class InstrumentSelect extends Component {
     let resolutionSelect = "";
     if( this.props.configuration.currentInstrument){
       resolutionSelect = (
-        <select onChange={this.handleChange} ref="resolution" onIn> 
+        <select onChange={this.handleChange} ref="resolution" > 
         {Object.keys(this.props.instruments[this.props.configuration.currentInstrument].images).map((keyName, i) => (
            <option key={i}>{keyName}</option>
         ))}

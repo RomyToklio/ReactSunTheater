@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { selectTimerFromStepSlider, selectConfiguration, selectInstruments, selectStepSlider } from '../selectors';
+import { selectConfiguration, selectInstruments, selectStepSlider } from '../selectors';
 import { Picture } from '../components/Picture/Picture';
 
 function mapStateToProps(state) {

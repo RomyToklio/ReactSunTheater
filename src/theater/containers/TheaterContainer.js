@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { libraryLoaded } from '../actions';
-import { selectImages, selectInstruments } from '../selectors';
+import { selectInstruments } from '../selectors';
 import Theater from '../components/Theater/Theater';
 
 function mapStateToProps(state) {
