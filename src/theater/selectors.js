@@ -41,7 +41,7 @@ export function selectStepSliderImageCount(state) {
     && state.theater.configuration.currentResolution 
     && state.theater.instruments[state.theater.configuration.currentInstrument].images[state.theater.configuration.currentResolution]
     ){
-    return state.theater.instruments[state.theater.configuration.currentInstrument].images[state.theater.configuration.currentResolution].length;
+    return state.theater.instruments[state.theater.configuration.currentInstrument].images[state.theater.configuration.currentResolution].length - 1;
   }
   return 0;
 }

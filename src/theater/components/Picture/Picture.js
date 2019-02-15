@@ -7,7 +7,7 @@ class Picture extends Component {
     let image = "";
     if(this.props.configuration.currentInstrument && this.props.configuration.currentResolution){
       const tmp = this.props.instruments[this.props.configuration.currentInstrument].images[this.props.configuration.currentResolution];
-      if(tmp){
+      if(tmp && tmp[this.props.index] !== undefined){
         image = (
           <img alt="" src={tmp[this.props.index].url} />
         );

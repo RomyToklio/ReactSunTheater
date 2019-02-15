@@ -4,11 +4,16 @@ class InstrumentSelect extends Component {
 
   handleChange = (event) => {
     let resolution = null;
-    if(this.refs.resolution === undefined){
+    if(event.currentTarget.ref === 'instrument'){
       resolution = Object.keys(this.props.instruments[this.refs.instrument.value].images)[0];
     }else {
-      resolution = this.refs.resolution.value;
+      if(this.refs.resolution === undefined){
+        resolution = Object.keys(this.props.instruments[this.refs.instrument.value].images)[0];
+      }else {
+        resolution = this.refs.resolution.value;
+      }
     }
+    
     const obj = {
       currentInstrument: this.refs.instrument.value,
       currentResolution: resolution
@@ -19,7 +24,7 @@ class InstrumentSelect extends Component {
     let resolutionSelect = "";
     if( this.props.configuration.currentInstrument){
       resolutionSelect = (
-        <select onChange={this.handleChange} ref="resolution"> 
+        <select onChange={this.handleChange} ref="resolution" onIn> 
         {Object.keys(this.props.instruments[this.props.configuration.currentInstrument].images).map((keyName, i) => (
            <option key={i}>{keyName}</option>
         ))}

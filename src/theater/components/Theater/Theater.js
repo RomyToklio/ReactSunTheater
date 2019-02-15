@@ -9,7 +9,7 @@ import axios from 'axios';
 import { numberToTimer } from '../../selectors';
 import { isArray } from 'util';
 import { InstrumentSelect } from '../InstrumentSelect/InstrumentSelect';
-import { instrumentsDefault } from '../../containers/tmp';
+import { instrumentsDefault } from '../../tmp';
 import { InstrumentSelectContainer } from '../../containers/InstrumentSelectContainer';
 
 const styles = theme => ({
@@ -50,7 +50,7 @@ class Theater extends Component {
     return (
       <div className="Theater"> 
         <Grid container spacing={24}>
-          <Grid item xs={12}>
+          <Grid item xs={6}>
           <InstrumentSelectContainer />
           <StepSliderContainer />
           <PictureContainer />
